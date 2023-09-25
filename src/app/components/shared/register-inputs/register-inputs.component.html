@@ -1,0 +1,10 @@
+<mat-form-field>
+  <input matInput [(ngModel)]="fieldValue"(blur)="onBlur()" [placeholder]="placeholderText" >
+</mat-form-field>
+
+
+<div>
+  {{ responseMessage }}
+  <mat-icon *ngIf="responseMessage === 'Disponivel'">check_circle</mat-icon>
+  <mat-icon class="valid-input"  *ngIf="responseMessage === 'Indisponivel'">cancel</mat-icon>
+</div>
